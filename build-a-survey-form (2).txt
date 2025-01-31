@@ -1,0 +1,229 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Best Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="title">The Best Survey</h1>
+    <p id="description">Please fill out this survey</p>
+  </header>
+
+  <div class="form-container">
+    <form id="survey-form">
+      
+      <div class="form-group">
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="number" id="number-label">Phone Number:</label>
+        <input type="number" id="number" name="number" min="1" max="100" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dropdown">Are you happy with your service:</label>
+        <select id="dropdown" name="dropdown">
+          <option value="option1">Yes</option>
+          <option value="option2">No</option>
+        </select>
+        <span id="dropdown-answer"></span>
+      </div>
+      <fieldset class="form-group">
+        <legend>Can we email you coupons periodically?</legend>
+        <label for="radio1"></label>
+        <input type="radio" id="radio1" name="survey" value="option1">
+        <span class="answer" id="radio1-answer"> Absolutely Yay!</span> 
+
+        <label for="radio2"></label>
+        <input type="radio" id="radio2" name="survey" value="option2">
+        <span class="answer" id="radio2-answer">No I hate coupons!</span> 
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Would you recommend our service to others?</legend>
+        <label for="radio3"></label>
+        <input type="radio" id="radio3" name="recommendation" value="yes">
+        <span class="answer" id="radio3-answer"> Yes, absolutely!</span> 
+
+        <label for="radio4"></label>
+        <input type="radio" id="radio4" name="recommendation" value="maybe">
+        <span class="answer" id="radio4-answer"> Not sure yet.</span> 
+
+        <label for="radio5"></label>
+        <input type="radio" id="radio5" name="recommendation" value="no">
+        <span class="answer" id="radio5-answer"> No I wouldn't.</span> 
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Do you like country music?</legend>
+        <label for="checkbox1"></label>
+        <input type="checkbox" id="checkbox1" name="survey-options" value="optionA">
+        <span class="answer" id="checkbox1-answer"> Yeehaw!</span> 
+
+        <label for="checkbox2"></label>
+        <input type="checkbox" id="checkbox2" name="survey-options" value="optionB">
+        <span class="answer" id="checkbox2-answer"> Eww No </span> 
+      </fieldset>
+
+     
+      <div class="form-group">
+        <label for="comments">Your comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+      </div>
+
+      
+      <div class="form-group">
+        <input type="submit" id="submit" value="Submit">
+      </div>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
+
+
+
+** end of undefined **
+
+** start of undefined **
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: purple;
+  color: #333;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+h1#title {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#description {
+  font-size: 3.5rem ;
+  color: black;
+}
+
+
+.form-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px; 
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #444;
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid lavender;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  padding: 0 10px;
+}
+
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #2d4373;
+}
+
+
+
+** end of undefined **
+
